@@ -8,11 +8,11 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Rrsqp4EveSupercapitalWatchlist.jar" size="9868" download="eager" />
+    <jar href="Rrsqp4EveSupercapitalWatchlist.jar" size="6972" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Rrsqp4EveSupercapitalWatchlist" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="rrsqp4evesupercapitalwatchlist.Rrsqp4EveSupercapitalWatchlist"  name="Rrsqp4EveSupercapitalWatchlist" />
+  <jfx:javafx-desc  width="800" height="600" main-class="rrsqp4evesupercapitalwatchlist.Main"  name="Rrsqp4EveSupercapitalWatchlist" />
   <update check="always"/>
 </jnlp>

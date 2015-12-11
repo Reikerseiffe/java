@@ -37,7 +37,7 @@ public class Character {
         this.corporation = new SimpleStringProperty("Graviton Solutions");
         this.alliance = new SimpleStringProperty("Alts");
         this.location = new SimpleStringProperty("Jita");
-        this.lastSeen = new SimpleObjectProperty<LocalDate>(LocalDate.of(2015, 10, 31));
+        this.lastSeen = new SimpleObjectProperty<>(LocalDate.of(2015, 10, 31));
     }
     
      public String getUsername() {

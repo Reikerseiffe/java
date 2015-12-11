@@ -18,7 +18,7 @@ import javafx.scene.control.TableView;
  *
  * @author Reiker
  */
-public class CharacterOverviewController implements Initializable {
+public abstract class CharacterOverviewController implements Initializable {
 
     @FXML
     private TableView<Character> characterTable;
@@ -43,27 +43,23 @@ public class CharacterOverviewController implements Initializable {
     
     private Main main;
     
-     public CharacterOverviewController() {
+    public CharacterOverviewController() {
     }
     
     /**
      * Initializes the controller class.
      */
+    @FXML
     public void initialize() {
         usernameColumn.setCellValueFactory(cellData -> cellData.getValue().usernameProperty());
         shipColumn.setCellValueFactory(cellData -> cellData.getValue().shipProperty());
     }    
     
-    public void setMainApp(Main main) {
+    public void setMain(Main main) {
         this.main = main;
 
         // Add observable list data to the table
         characterTable.setItems(main.getCharacterList());
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
