@@ -5,11 +5,12 @@
  */
 package rrsqp4evesupercapitalwatchlist;
 
-import java.awt.Label;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
@@ -18,7 +19,7 @@ import javafx.scene.control.TableView;
  *
  * @author Reiker
  */
-public abstract class CharacterOverviewController implements Initializable {
+public class CharacterOverviewController implements Initializable {
 
     @FXML
     private TableView<Character> characterTable;
@@ -49,17 +50,18 @@ public abstract class CharacterOverviewController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML
-    public void initialize() {
-        usernameColumn.setCellValueFactory(cellData -> cellData.getValue().usernameProperty());
-        shipColumn.setCellValueFactory(cellData -> cellData.getValue().shipProperty());
-    }    
     
     public void setMain(Main main) {
         this.main = main;
 
         // Add observable list data to the table
         characterTable.setItems(main.getCharacterList());
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        usernameColumn.setCellValueFactory(cellData -> cellData.getValue().usernameProperty());
+        shipColumn.setCellValueFactory(cellData -> cellData.getValue().shipProperty());
     }
     
 }

@@ -63,6 +63,7 @@ public class Main extends Application{
             
         } catch (IOException e) {
             System.out.println("Could not input characterOverview");
+            System.out.println(e);
         }
     }
      
