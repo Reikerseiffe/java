@@ -14,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -71,6 +72,8 @@ public class Main extends Application{
     
     public Main() {
         characterList.add(new Character("omega45", "aeon"));
+        characterList.add(new Character("Marksman81", "Nyx"));
+        
     }
     
     public ObservableList<Character> getCharacterList() {
@@ -80,6 +83,43 @@ public class Main extends Application{
     public Stage getPrimaryStage() {
         return primaryStage;
     }
+    
+    public boolean charactertEditDialog(Character character) {
+    try {
+        // Load the fxml file and create a new stage for the popup dialog.
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("AddEditCharacter.fxml"));
+        AnchorPane page = (AnchorPane) loader.load();
+
+        // Create the dialog Stage.
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("Character Editor");
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(primaryStage);
+        Scene scene = new Scene(page);
+        dialogStage.setScene(scene);
+
+        // Set the person into the controller.
+        AddEditCharacterController controller = loader.getController();
+        controller.setDialogStage(dialogStage);
+        controller.setCharacter(character);
+
+        // Show the dialog and wait until the user closes it
+        dialogStage.showAndWait();
+
+        return controller.isOkClicked();
+    } catch (IOException e) {
+        e.printStackTrace();
+        return false;
+    }
+}
+    
+    
+    
+    
+    
+    
+    
     
     public static void main(String[] args) {
         launch(args);

@@ -39,23 +39,23 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="usernameLabel" text="Username" />
-                        <Label fx:id="corporationLabel" text="Corporation" GridPane.rowIndex="1" />
-                        <Label fx:id="allianceLabel" text="Alliance" GridPane.rowIndex="2" />
-                        <Label fx:id="shipLabel" text="Ship" GridPane.rowIndex="3" />
-                        <Label fx:id="lastSeenLabel" text="Last Seen" GridPane.rowIndex="4" />
-                        <Label fx:id="locationLabel" text="Location" GridPane.rowIndex="5" />
-                        <Label text="Label" GridPane.columnIndex="1" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Username" />
+                        <Label text="Corporation" GridPane.rowIndex="1" />
+                        <Label text="Alliance" GridPane.rowIndex="2" />
+                        <Label text="Ship" GridPane.rowIndex="3" />
+                        <Label text="Last Seen" GridPane.rowIndex="4" />
+                        <Label text="Location" GridPane.rowIndex="5" />
+                        <Label fx:id="usernameLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="corporationLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="allianceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="shipLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="lastSeenLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="locationLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
-                  <Button layoutX="491.0" layoutY="14.0" mnemonicParsing="false" text="New Character" />
-                  <Button layoutX="493.0" layoutY="47.0" mnemonicParsing="false" text="Edit Character" />
-                  <Button layoutX="479.0" layoutY="86.0" mnemonicParsing="false" text="Delete Character" />
+                  <Button layoutX="491.0" layoutY="14.0" mnemonicParsing="false" onAction="#newCharacter" text="New Character" />
+                  <Button layoutX="493.0" layoutY="47.0" mnemonicParsing="false" onAction="#editCharacter" text="Edit Character" />
+                  <Button layoutX="479.0" layoutY="86.0" mnemonicParsing="false" onAction="#deleteCharacter" text="Delete Character" />
                </children>
             </AnchorPane>
         </items>
