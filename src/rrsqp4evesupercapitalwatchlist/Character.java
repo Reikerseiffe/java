@@ -6,6 +6,7 @@
 package rrsqp4evesupercapitalwatchlist;
 
 import java.time.LocalDate;
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -24,6 +25,7 @@ public class Character {
     private final StringProperty alliance;
     private final StringProperty location;
     private final ObjectProperty<LocalDate> lastSeen;
+
     
     public Character() {
         this(null, null);
@@ -32,8 +34,7 @@ public class Character {
     public Character(String username, String ship) {
         this.username = new SimpleStringProperty(username);
         this.ship = new SimpleStringProperty(ship);
-
-        // Some initial dummy data, just for convenient testing.
+        //EXAMPLE STUFF
         this.corporation = new SimpleStringProperty("Graviton Solutions");
         this.alliance = new SimpleStringProperty("Alts");
         this.location = new SimpleStringProperty("Jita");
@@ -111,5 +112,7 @@ public class Character {
     public ObjectProperty<LocalDate> lastSeenProperty() {
         return lastSeen;
     }
+    
+
 
 }
