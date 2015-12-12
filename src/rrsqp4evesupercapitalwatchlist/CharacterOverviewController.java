@@ -142,4 +142,6 @@ public class CharacterOverviewController implements Initializable {
     }
     
     
+    
+    
 }
